@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start gRPC Server",
+      "type": "shell",
+      "command": "npm install && node server.js",
+      "options": {
+        "cwd": "${workspaceFolder}/grpc-server"
+      },
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Start React UI",
+      "type": "shell",
+      "command": "npm install && npm run dev",
+      "options": {
+        "cwd": "${workspaceFolder}/marketdata-ui"
+      },
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}

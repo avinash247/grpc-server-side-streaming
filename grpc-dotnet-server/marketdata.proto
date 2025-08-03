@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service MarketData {
+  rpc SubscribePrice (PriceRequest) returns (stream PriceUpdate);
+}
+
+message PriceRequest {
+  string symbol = 1;
+}
+
+message PriceUpdate {
+  string symbol = 1;
+  double price = 2;
+  int64 timestamp = 3;
+}
